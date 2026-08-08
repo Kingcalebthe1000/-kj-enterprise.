@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>KJ Enterprise | Snack Business</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f5f5;
+      color: #111111;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #087cff, #ff7900);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+      border-bottom: 8px solid #111111;
+    }
+
+    .smileys {
+      font-size: 32px;
+      letter-spacing: 8px;
+      margin-bottom: 15px;
+    }
+
+    .logo {
+      font-size: 52px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-shadow: 4px 4px 0 #111111;
+    }
+
+    .subtitle {
+      font-size: 20px;
+      margin-top: 8px;
+      font-weight: bold;
+    }
+
+    main {
+      width: 90%;
+      max-width: 1000px;
+      margin: auto;
+      padding: 35px 0 60px;
+    }
+
+    section {
+      margin-bottom: 35px;
+    }
+
+    .goal {
+      background: #111111;
+      color: white;
+      border-radius: 25px;
+      padding: 40px 30px;
+      text-align: center;
+      box-shadow: 10px 10px 0 #087cff;
+    }
+
+    .goal-smiley {
+      font-size: 55px;
+      margin-bottom: 10px;
+    }
+
+    .goal h2 {
+      color: #ff7900;
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+
+    .goal h3 {
+      font-size: 27px;
+      margin-bottom: 15px;
+    }
+
+    .goal p {
+      max-width: 650px;
+      margin: auto;
+      font-size: 18px;
+      color: #eeeeee;
+    }
+
+    .goal-box {
+      margin: 25px auto 0;
+      max-width: 600px;
+      background: white;
+      color: #111111;
+      padding: 20px;
+      border-radius: 18px;
+    }
+
+    .goal-box strong {
+      font-size: 25px;
+      color: #087cff;
+    }
+
+    .about {
+      background: white;
+      border: 4px solid #111111;
+      border-radius: 25px;
+      padding: 35px;
+      box-shadow: 8px 8px 0 #ff7900;
+    }
+
+    .section-title {
+      font-size: 32px;
+      margin-bottom: 15px;
+      color: #087cff;
+    }
+
+    .about p {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    .big-message {
+      font-size: 23px;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 25px;
+    }
+
+    .snacks {
+      background: #087cff;
+      color: white;
+      border-radius: 25px;
+      padding: 35px;
+      box-shadow: 8px 8px 0 #111111;
+    }
+
+    .snacks .section-title {
+      color: white;
+    }
+
+    .snack-intro {
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .category {
+      background: white;
+      color: #111111;
+      border-radius: 18px;
+      padding: 25px;
+      text-align: center;
+      border: 3px solid #111111;
+      transition: transform 0.2s;
+    }
+
+    .category:hover {
+      transform: translateY(-5px);
+    }
+
+    .category-icon {
+      font-size: 42px;
+    }
+
+    .category h3 {
+      margin-top: 8px;
+      font-size: 22px;
+    }
+
+    .category p {
+      margin-top: 5px;
+      color: #444444;
+    }
+
+    .menu {
+      background: white;
+      border: 4px solid #111111;
+      border-radius: 25px;
+      padding: 35px;
+      box-shadow: 8px 8px 0 #087cff;
+    }
+
+    .menu-list {
+      margin-top: 20px;
+    }
+
+    .item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+      border-bottom: 2px solid #eeeeee;
+      font-size: 18px;
+    }
+
+    .item:last-child {
+      border-bottom: none;
+    }
+
+    .price {
+      font-weight: 900;
+      color: #ff7900;
+    }
+
+    .business {
+      background: #ff7900;
+      color: #111111;
+      border: 4px solid #111111;
+      border-radius: 25px;
+      padding: 35px;
+      text-align: center;
+      box-shadow: 8px 8px 0 #111111;
+    }
+
+    .business h2 {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    .business p {
+      font-size: 18px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .smiley-row {
+      font-size: 35px;
+      margin-top: 20px;
+      letter-spacing: 10px;
+    }
+
+    footer {
+      background: #111111;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    footer .footer-smileys {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    footer p {
+      color: #cccccc;
+    }
+
+    @media (max-width: 650px) {
+      .logo {
+        font-size: 38px;
+      }
+
+      .subtitle {
+        font-size: 17px;
+      }
+
+      .categories {
+        grid-template-columns: 1fr;
+      }
+
+      .goal h2 {
+        font-size: 28px;
+      }
+
+      .goal h3 {
+        font-size: 23px;
+      }
+
+      .section-title {
+        font-size: 27px;
+      }
+
+      .about,
+      .snacks,
+      .menu,
+      .business {
+        padding: 25px 20px;
+      }
+
+      .item {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+
+    <div class="smileys">
+      🙂 🙂 🙂 🙂 🙂
+    </div>
+
+    <div class="logo">
+      KJ ENTERPRISE
+    </div>
+
+    <div class="subtitle">
+      Snacks • Business • Savings • Goals
+    </div>
+
+    <div class="smileys">
+      🙂 🙂 🙂 🙂 🙂
+    </div>
+
+  </header>
+
+  <main>
+
+    <section class="goal">
+
+      <div class="goal-smiley">
+        🙂💻🙂
+      </div>
+
+      <h2>
+        MY BIG GOAL
+      </h2>
+
+      <h3>
+        SAVE FOR MY GAMING PC
+      </h3>
+
+      <p>
+        Every snack I sell helps me get closer
+        to my PC goal.
+      </p>
+
+      <div class="goal-box">
+
+        <p>
+          My business isn't just about selling snacks.
+        </p>
+
+        <strong>
+          I'm building toward something I want.
+        </strong>
+
+      </div>
+
+    </section>
+
+    <section class="about">
+
+      <h2 class="section-title">
+        🙂 About KJ Enterprise
+      </h2>
+
+      <p>
+        Hi! I'm the owner of KJ Enterprise.
+      </p>
+
+      <p>
+        I run a small snack business at school.
+        I sell a variety of snacks and drinks to
+        other students.
+      </p>
+
+      <p>
+        My goal is to learn how to manage money,
+        run a small business, make smart decisions,
+        and save my profits toward my gaming PC.
+      </p>
+
+      <div class="big-message">
+        I'm not selling just one thing.
+        <br>
+        I'm building a business. 🙂💰💻
+      </div>
+
+    </section>
+
+    <section class="snacks">
+
+      <h2 class="section-title">
+        🍿 What I Sell
+      </h2>
+
+      <p class="snack-intro">
+        KJ Enterprise is about variety.
+        Different snacks, different tastes,
+        and different choices.
+      </p>
+
+      <div class="categories">
+
+        <div class="category">
+
+          <div class="category-icon">
+            🌶️
+          </div>
+
+          <h3>
+            Spicy Snacks
+          </h3>
+
+          <p>
+            Takis, Hot Cheetos,
+            Hot Fries, and more.
+          </p>
+
+        </div>
+
+        <div class="category">
+
+          <div class="category-icon">
+            🍫
+          </div>
+
+          <h3>
+            Sweet Snacks
+          </h3>
+
+          <p>
+            Candy, chocolate,
+            and other treats.
+          </p>
+
+        </div>
+
+        <div class="category">
+
+          <div class="category-icon">
+            🥤
+          </div>
+
+          <h3>
+            Drinks
+          </h3>
+
+          <p>
+            Cold drinks and
+            refreshments.
+          </p>
+
+        </div>
+
+        <div class="category">
+
+          <div class="category-icon">
+            🍿
+          </div>
+
+          <h3>
+            More Snacks
+          </h3>
+
+          <p>
+            Different products can
+            be added as the business grows.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="menu">
+
+      <h2 class="section-title">
+        🛒 Current Menu
+      </h2>
+
+      <div class="menu-list">
+
+        <div class="item">
+          <span>Hot Cheetos</span>
+          <span class="price">$1.75</span>
+        </div>
+
+        <div class="item">
+          <span>Takis</span>
+          <span class="price">$2.00</span>
+        </div>
+
+        <div class="item">
+          <span>Hot Fries</span>
+          <span class="price">$1.75</span>
+        </div>
+
+        <div class="item">
+          <span>Sprite</span>
+          <span class="price">$2.00</span>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="business">
+
+      <h2>
+        🙂 Why I'm Doing This
+      </h2>
+
+      <p>
+        KJ Enterprise is a small business with
+        a big goal. I'm selling snacks, saving
+        money, and learning how business works.
+      </p>
+
+      <div class="smiley-row">
+        🙂 💰 🍿 💻 🙂
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+
+    <div class="footer-smileys">
+      🙂 🙂 🙂 🙂 🙂
+    </div>
+
+    <p>
+      © 2026 KJ Enterprise
+    </p>
+
+    <p>
+      Snacks today. PC tomorrow. 💻
+    </p>
+
+  </footer>
+
+</body>
+</html>
